@@ -40,3 +40,30 @@
 
     ];
 
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Hotels</h1>
+
+<ul>
+    <?php
+    foreach ($hotels as $hotel) {
+        echo "<li>";
+        echo "<strong>Name:</strong> " . $hotel['name'] . "<br>";
+        echo "<strong>Description:</strong> " . $hotel['description'] . "<br>";
+        echo "<strong>Parking:</strong> " . ($hotel['parking'] ? 'Yes' : 'No') . "<br>";
+        echo "<strong>Vote:</strong> " . $hotel['vote'] . "<br>";
+        echo "<strong>Distance to Center:</strong> " . $hotel['distance_to_center'] . " km<br>";
+        echo "</li>";
+    }
+    ?>
+</ul>
+</body>
+</html>
