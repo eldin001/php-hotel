@@ -1,5 +1,4 @@
 <?php
-session_start();
 $hotels = [
     [
         'name' => 'Hotel Belvedere',
@@ -45,11 +44,6 @@ if (isset($_GET['parking']) && $_GET['parking'] == 'on') {
     });
 }
 
-
-if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
-    exit(); 
-}
 ?>
 
 <!DOCTYPE html>
